@@ -1,0 +1,44 @@
+5. Function that calculates shipping costs for an online shopping system.
+The function calculates shipping costs based on the total weight of the items
+in the order and the shipping method chosen by the customer.
+The shipping cost rules are as follows:
+
+def func(w, t) weight, type
+    return cost
+
+----------------------------------------------------------------------------------
+For standard shipping:
+If the total weight is less than or equal to 5 kg, the cost is $10.
+
+t == standard && w = 5 cost = 10
+
+If the total weight is between 5 and 10 kg (inclusive), the cost is $15.
+
+t == standard && w = 10 cost = 15
+t == standard && w = 5.000001.... cost = 15
+
+If the total weight is greater than 10 kg, the cost is $20.
+
+t == standard && w = 10.00001..... cost = 20
+
+---------------------------------------------------------------------------------
+
+For express shipping:
+If the total weight is less than or equal to 5 kg, the cost is $20.
+
+t == express && w = 5 cost = 20
+
+If the total weight is between 5 and 10 kg (inclusive), the cost is $30.
+
+t == express && w = 10 cost = 30
+t == express && w = 5.000001.... cost = 30
+
+If the total weight is greater than 10 kg, the cost is $40.
+
+t == standard && w = 10.00001..... cost = 40
+
+Special cases
+
+w < 0  = Error
+w != NUM = Error
+t != standard || express = Error
