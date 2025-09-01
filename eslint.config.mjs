@@ -1,35 +1,35 @@
-import prettier from "eslint-plugin-prettier";
-import globals from "globals";
+import prettier from 'eslint-plugin-prettier';
+import globals from 'globals';
 
 export default [
   {
-    files: ["**/*.js"],
-    ignores: [".github/**", "node_modules/**"],
+    files: ['**/*.js'],
+    ignores: ['.github/**', 'node_modules/**'],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "module",
+      sourceType: 'module',
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
     plugins: {
-      prettier
+      prettier,
     },
     rules: {
       // ESLint recommended rules
-      "no-unused-vars": "warn",
-      "no-console": "off",
+      'no-unused-vars': 'warn',
+      'no-console': 'off',
 
       // Prettier integration
-      "prettier/prettier": [
-        "error",
+      'prettier/prettier': [
+        'error',
         {
           semi: true,
           singleQuote: true,
-          trailingComma: "es5"
-        }
-      ]
-    }
-  }
+          trailingComma: 'es5',
+        },
+      ],
+    },
+  },
 ];
