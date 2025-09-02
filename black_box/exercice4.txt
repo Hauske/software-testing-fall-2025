@@ -1,0 +1,27 @@
+4. Function that processes user orders in an e-commerce system.
+The function calculates the total price of the items in the order,
+applying different discounts based on the quantity of each item.
+The discount rules are as follows:
+
+def func(obj) o arreglo o mapa etc
+    return discount
+
+---------------------------------------------------------------------------------------------------
+
+If the quantity of a single item is between 1 and 5 (inclusive), no discount is applied.
+
+obj.x = 1 no discount is applied
+obj.x = 5 no discount is applied
+
+If the quantity of a single item is between 6 and 10 (inclusive), a 5% discount is applied.
+
+obj.x = 6 5% discount is applied
+obj.x = 10 5% discont is applied
+
+If the quantity of a single item is greater than 10, a 10% discount is applied.
+
+obj.x = 11 10% discount is applied
+
+Special cases
+
+obj.x = 0 Error/ no discount
